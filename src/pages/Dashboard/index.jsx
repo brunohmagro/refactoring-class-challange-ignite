@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import Header from '../../components/Header';
 import api from '../../services/api';
-import Food from '../../components/Food';
+import Food, { FoodProps } from '../../components/Food';
 import ModalAddFood from '../../components/ModalAddFood';
 import ModalEditFood from '../../components/ModalEditFood';
 import { FoodsContainer } from './styles';
@@ -108,6 +108,7 @@ class Dashboard extends Component {
               <Food
                 key={food.id}
                 food={food}
+                isAvailable={food.available}
                 handleDelete={this.handleDeleteFood}
                 handleEditFood={this.handleEditFood}
               />
