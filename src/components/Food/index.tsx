@@ -8,7 +8,7 @@ import { FoodProps } from "../../interfaces/Food/Food";
 interface FoodComponentProps {
   isAvailable: boolean;
   food: FoodProps;
-  handleEditFood(food: FoodProps): Promise<void>;
+  handleEditFood(food: FoodProps): void;
   handleDelete(id: number): Promise<void>;
 }
 
